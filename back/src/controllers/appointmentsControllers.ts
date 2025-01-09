@@ -12,7 +12,7 @@ export const getAllAppointments = async (req: Request, res: Response) => {
     }
 }
 
-export const getAppointmentsById = async (req: Request, res: Response) => {
+export const getAppointmentById = async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
         const appointment: Appointment = await getAppointmentByIdService(Number(id));
@@ -34,7 +34,7 @@ export const schedule = async (req: Request, res: Response) => {
     };
 }
 
-export const inactiveAppointment = async (req: Request, res: Response) => {
+export const cancelAppointment = async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
         const newAppointment: Appointment = await cancelAppointmentService(Number(id));

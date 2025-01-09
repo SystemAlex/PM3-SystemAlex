@@ -24,4 +24,9 @@ export const createUserService = async (createUserDto: IUserDto): Promise<User> 
     newUser.credential = newCredential;
     await userModel.save(newUser);
     return newUser;
-};
+}
+
+export const findUser = async (credentialId: number): Promise<User> => {
+    const user: User = await userModel.findOneBy({credential: { id: credentialId }});
+    return user;
+}
