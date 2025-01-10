@@ -1,7 +1,7 @@
 interface IAppointmentDto {
     date: string;
     time: string;
-    status: "Active" | "Cancelled" | "Completed";
+    status: "Activo" | "Cancelado" | "Completado";
     userId: number;
     description: string
 }

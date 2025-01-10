@@ -25,7 +25,7 @@ export const createAppointmentService = async (createAppointmentDto: IAppointmen
 export const cancelAppointmentService = async (appointmentId: number) => {
     const foundAppointment = await appointmentModel.findOneBy({ id: appointmentId });
     if (!foundAppointment) throw Error("El turno no fue encontrado");
-    foundAppointment.status = "cancelled";
+    foundAppointment.status = "Cancelado";
     await appointmentModel.save(foundAppointment);
     return foundAppointment;
 }

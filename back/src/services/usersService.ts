@@ -27,6 +27,6 @@ export const createUserService = async (createUserDto: IUserDto): Promise<User> 
 }
 
 export const findUser = async (credentialId: number): Promise<User> => {
-    const user: User = await userModel.findOneBy({credential: { id: credentialId }});
+    const user: User = await userModel.findOne({ where: {credential: { id: credentialId }}, relations: ["appointments"] });
     return user;
 }

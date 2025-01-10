@@ -15,7 +15,7 @@ class Appointment {
     time: string
 
     @Column({
-        default: "Active"
+        default: "Activo"
     })
     status: string
 

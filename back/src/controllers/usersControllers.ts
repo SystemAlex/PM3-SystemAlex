@@ -26,7 +26,8 @@ export const getUserById = async (req: Request, res: Response) =>  {
 
 export const register = async (req: Request, res: Response) =>  {
     try{
-      const {name, email, username, password, birthdate, nDni}:IUserDto = req.body;
+      const {name, email, password, birthdate, nDni}:IUserDto = req.body;
+      let username = !req.body.username ? email : req.body.username; 
       const newUser:User= await createUserService({
         name, email, username, password, birthdate, nDni
       });

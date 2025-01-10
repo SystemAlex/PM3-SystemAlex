@@ -1,9 +1,11 @@
 import express from "express";
+import cors from "cors";
 import indexRouter from "./routes/indexRouter";
 
 const server = express();
 
 //Middlewares de express
+server.use(cors());
 server.use(express.json());
 server.use(indexRouter);
 

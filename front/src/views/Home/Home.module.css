@@ -1,0 +1,37 @@
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+  background-color: #f4f4f499;
+  flex-direction: column;
+  margin-top: 60px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .canchas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 .5rem 1rem black;
+  }
+  
+  .authButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #719f3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .authButton:hover {
+    background-color: #2c5408;
+  }
+  

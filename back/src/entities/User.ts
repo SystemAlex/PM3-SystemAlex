@@ -12,13 +12,18 @@ class User {
     @Column()
     name: string
 
-    @Column()
+    @Column({
+        unique: true
+    })
     email: string
 
     @Column()
     birthdate: Date
 
-    @Column()
+
+    @Column({
+        unique: true
+    })
     nDni: number
 
     @OneToOne(() => Credential)

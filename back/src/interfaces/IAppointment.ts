@@ -2,7 +2,7 @@ interface IAppointment {
     id: number;
     date: Date;
     time: string;
-    status: "Active" | "Cancelled" | "Completed";
+    status: "Activo" | "Cancelado" | "Completado";
     userId: number;
 }
 
